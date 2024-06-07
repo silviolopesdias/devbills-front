@@ -8,7 +8,7 @@ export function Home() {
       <Logo />
       <div>
         <Button>Nova Transação</Button>
-        <Button>Nova Categoria</Button>
+        <Button>Nova Transação</Button>
       </div>
     </Header>
   );
