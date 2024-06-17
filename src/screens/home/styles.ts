@@ -51,3 +51,12 @@ gap: 0.5rem;
 
 
 `
+export const Balance = styled.div`
+display: flex;
+align-items: center;
+gap: 0.75rem;
+width: 100%;
+
+
+
+`
