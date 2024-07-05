@@ -8,20 +8,20 @@ import { Card } from '../../components/card';
 import { Transaction } from '../../components/transaction';
 import { CreateCategoryDialog } from '../../components/create-category-dialog';
 import { CreateTransactionDialog } from '../../components/create-transaction-dialog ';
+import { CategoriesPieChart } from '../../components/categories-pie-chart';
+import { FinancialEvolutionBarChart } from '../../components/financial-evolution-bar-chart';
 
 export function Home() {
   return (
     <>
       <Header>
         <Logo />
-        <div> 
-          
-         <CreateTransactionDialog />
-          <CreateCategoryDialog />       
-      
+        <div>
+          <CreateTransactionDialog />
+          <CreateCategoryDialog />
         </div>
       </Header>
-      <Main>s
+      <Main>
         <Section>
           <Filters>
             <Title title="Saldo" subtitle="Receitas e despesas no período" />
@@ -56,7 +56,9 @@ export function Home() {
             <header>
               <Title title='Gastos' subtitle='Despesas por categoria no período' />
             </header>
-            <ChartContent></ChartContent>
+            <ChartContent>
+              <CategoriesPieChart />
+            </ChartContent>
           </ChartContainer>
           <ChartContainer>
             <header>
@@ -73,7 +75,9 @@ export function Home() {
                 <ButtonIcon />
               </ChartAction>
             </header>
-            <ChartContent></ChartContent>
+            <ChartContent>
+              <FinancialEvolutionBarChart />
+            </ChartContent>
           </ChartContainer>
 
         </Section>
@@ -86,23 +90,23 @@ export function Home() {
                 placeholder="Procurar transação..."
               />
               <ButtonIcon />
-            </SearchTransaction>         
+            </SearchTransaction>
           </header>
           <TransactionGroup>
-          <Transaction 
-            id={1}
-            amount={20000}
-            date='20/06/2024'
-            category={{ title: 'Alimentação', color: '#ff33bb' }}
-            title='Merccado'
-             />
-            <Transaction 
-            id={2}
-            amount={70000}
-            date='20/06/2024'
-            category={{ title: 'Educação', color: '#ff33bb' }}
-            title='Escola'
-             />
+            <Transaction
+              id={1}
+              amount={20000}
+              date='20/06/2024'
+              category={{ title: 'Alimentação', color: '#ff33bb' }}
+              title='Merccado'
+            />
+            <Transaction
+              id={2}
+              amount={70000}
+              date='20/06/2024'
+              category={{ title: 'Educação', color: '#ff33bb' }}
+              title='Escola'
+            />
           </TransactionGroup>
 
         </Aside>
