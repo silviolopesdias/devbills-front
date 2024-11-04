@@ -1,18 +1,16 @@
-import { ComponentProps, forwardRef } from "react";
-import { MagnifyingGlass } from "@phosphor-icons/react/dist/ssr";
-import { Container } from "./styles";
+import { MagnifyingGlass } from '@phosphor-icons/react';
+import { ComponentProps, forwardRef } from 'react';
 
+import { Container } from './styles';
 
+type ButtonIconProps = ComponentProps<'button'>;
 
-type ButtonIconProps = ComponentProps<'button'> 
-
-
-export const ButtonIcon = forwardRef<HTMLButtonElement, ButtonIconProps>(function ({ ...props },
-     ref,
-    ) {
+export const ButtonIcon = forwardRef<HTMLButtonElement, ButtonIconProps>(
+  function ({ ...props }, ref) {
     return (
-    <Container {...props} ref= {ref} >
-      <MagnifyingGlass />
-        </Container>
-        )
-});
+      <Container {...props} ref={ref}>
+        <MagnifyingGlass />
+      </Container>
+    );
+  },
+);
